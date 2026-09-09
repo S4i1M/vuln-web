@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vulnerable Web Lab - Fixed</title>
+</head>
+<body>
+
+    <h1>Simple Solution">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function submitInput() {
+            const input = document.getElementById("input").value;
+
+            // INTENTIONALLY VULNERABLE
+            document.getElementById("result").textContent = input;
+        }
+    </script>
+
+</body>
+</html>
