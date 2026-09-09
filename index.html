@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vulnerable Web Lab</title>
+</head>
+<body>
+
+    <h1>Simple XSS Lab</h1>
+
+    <input id="input" placeholder="Enter something">
+    <button onclick="submitInput()">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function submitInput() {
+            const input = document.getElementById("input").value;
+
+            // INTENTIONALLY VULNERABLE - can be solved with changing the innerHTML to textContent
+            document.getElementById("result").innerHTML = input;
+        }
+    </script>
+
+</body>
+</html>
